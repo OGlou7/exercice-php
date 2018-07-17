@@ -78,8 +78,11 @@ echo $_GET['gender'];
   <input type="number" name="age" value=""><br/>
   "Homme ou Femme?"
   Male :<input type="radio" name="gender" value="Male">
-  Female :<input type="radio" name="gender" value="Female">
-   <button type="submit" value="Submit">OK</button>
+  Female :<input type="radio" name="gender" value="Female"><br/>
+  "Parles-tu anglais?"
+  oui :<input type="radio" name="choice" value="yes">
+  non :<input type="radio" name="choice" value="no">
+  <button type="submit" value="Submit">OK</button>
 </form>
 </body>
 
