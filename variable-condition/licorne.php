@@ -2,9 +2,6 @@
 <?php
 
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -22,5 +19,4 @@
 
   </form>
 </body>
-
 </html>
