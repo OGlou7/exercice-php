@@ -51,15 +51,9 @@
 
 <!-- Exercice pays -->
 <?php
-$pays = ["Belgique","Itale", "Espagne","Mexique", "Japon", "Chine", "Australie", "Angleterre", "Suisse","Philippines"];
-
-
-
+$pays = array( "BE" => "Belgique","FR" => "France", "IT" => "Italie", "EN" => "Angleterre", "CH" => "Chine", "ES" => "Espagne", "MT" => "Malte", "JP" => "Japon", "PH" => "Philippines", "SU" => "Suisse");
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +63,17 @@ $pays = ["Belgique","Itale", "Espagne","Mexique", "Japon", "Chine", "Australie",
   <title>Boucle PHP</title>
 </head>
 <body>
+  <form action="boucles.php" method="post">
+    <label for="pays">Choisi ton pays de résidence.</label>
+      <select>
+       <?php foreach ($pays as $pays_id => $pays_full) {
+         echo "<option value =".$pays_id.">".$pays_full."</option>";
+       }
+       ?>
+     </select>
 
+    <input type="submit" name="" value="Envoyer">
+
+  </form>
 </body>
 </html>
