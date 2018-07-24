@@ -1,0 +1,15 @@
+html{
+background-color: #ffe101;
+font-family: 'Courier New';
+}
+form {
+  text-align: center;
+  background-color: #ffe101;
+}
+
+section {
+  border: 3px solid black ;
+}
+input .placeholder{
+  background-color: #FFE363;
+}
