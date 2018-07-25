@@ -28,7 +28,7 @@
     $text =" est à l'étranger et reviendra ce lundi. ";
   }
   elseif (@$excuse == "intoxication") {
-    $text =" a eu un intoxication alimentaire. <br /> Le docteur prévoit une reprise des cours la semaine prochaine.";
+    $text =" a eu une intoxication alimentaire. <br /> Le docteur prévoit une reprise des cours la semaine prochaine.";
   }
   elseif (@$excuse == "extra-scolaire") {
     $text =" a un match SUPER important. ";
@@ -63,25 +63,25 @@
       <br>
       <strong>Raison de l'absence </strong><br>
       <label> <br>
-        <input name="excuse" type="radio" value="malade">malade &nbsp
+        <input name="excuse" type="radio" value="malade">Malade &nbsp
       </label>
       <label>
-        <input name="excuse" type="radio" value="familiale">familiale &nbsp
+        <input name="excuse" type="radio" value="familiale">Familiale &nbsp
       </label>
       <label>
-        <input name="excuse" type="radio" value="voyage">voyage &nbsp
+        <input name="excuse" type="radio" value="voyage">Voyage &nbsp
       </label>
       <label>
-        <input name="excuse" type="radio" value="intoxication">intoxication &nbsp
+        <input name="excuse" type="radio" value="intoxication">Intoxication &nbsp
       </label>
       <label>
-        <input name="excuse" type="radio" value="extra-scolaire">activité extra-scolaire &nbsp
+        <input name="excuse" type="radio" value="extra-scolaire">Activité extra-scolaire &nbsp
       </label><br><br>
       <button type="submit" name="button"> Envoyer</button> <br><br>
 
       <section>
       <h3>
-      <p><?php echo @$prof ?>,<br>
+      <p><?php echo @$prof ?>,<br><br>
       Je vous prie d'excuser l'absence ce <?php echo date('l d/m/y')?>. <br>
       En effet, notre enfant <?= @$_POST['prenom'] ?> <?= @$_POST['nom'] ?> ne pourra pas être présent à l'école aujourd'hui car
       <?= $genre ?> <?= @$text ?><br>
