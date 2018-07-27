@@ -34,8 +34,44 @@
     $text =" a un match SUPER important. ";
   }
 
-//SANITIZE ALL
-  $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+//>>>SANITIZE ALL<<<<
+  // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+//>>>>VALIDATION<<<<<
+// // define variables and set to empty values
+// $nom_error = $prenom_error = $prof_error  = "";
+// $nom = $prenom = $prof = "";
+//
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {              <<<EXECUTION>>
+//   if (empty($_POST["nom"])) {
+//     $nom_error = "Veuillez introduire votre nom";
+//   } else {
+//     $nom = test_input($_POST["nom"]);
+//   }
+//   if (empty($_POST["prenom"])) {
+//     $prenom_error = "Veuillez introduire votre prénom";
+//   } else {
+//     $prenom = test_input($_POST["prenom"]);
+//   }
+//   if (empty($_POST["prof"])) {
+//     $prof_error = "Veuillez introduire le nom du professeur";
+//   } else {
+//     $prof = test_input($_POST["prof"]);
+//   }
+// }
+
+//>>>READ FICHIER.TXT <<<
+//   $monfichier = file_get_contents('fichier.txt');
+//   // var_dump($monfichier);
+//   echo $monfichier;
+//
+// $monfichier .= >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
+// $add = "test add";
+// file_put_contents("fichier.txt",$monfichier); <<<<<REPLACE FICHIER>>>>>>>
+// OU
+// file_put_contents("fichier.txt",$add, FILE_APPEND); <<<<<<< ADD in fichier>>>>
+//
+// fclose($monfichier);
 
 ?>
 
@@ -51,16 +87,20 @@
     <form class="" action="" method="post">
       <h1>Générateur d'Excuses</h1>
       <strong>Nom</strong><br>
-      <input type="text" name="nom" size="35" value="" placeholder="Nom de l'enfant..."><br><br>
+      <input type="text" name="nom" size="35" value="" placeholder="Nom de l'enfant...">
+      <!-- <?php echo $nom_error;?> -->
+      <br><br>
       <strong>Prénom</strong><br>
-      <input type="text" name="prenom" size="35" value="" placeholder="Prénom de l'enfant..."><br>
-      <br>
+      <input type="text" name="prenom" size="35" value="" placeholder="Prénom de l'enfant...">
+      <!-- <?php echo $prenom_error;?> -->
+      <br><br>
       <input type="radio" name="genre" value="Fille">Fille &nbsp
       <input type="radio" name="genre" value="Garçon">Garçon <br>
       <br>
       <strong>Nom du professeur</strong><br>
-      <input type="text" name="prof" size="35" value="" placeholder="Nom du professeur..."><br>
-      <br>
+      <input type="text" name="prof" size="35" value="" placeholder="Nom du professeur...">
+      <!-- <?php echo $prof_error;?> -->
+      <br><br>
       <strong>Raison de l'absence </strong><br>
       <label> <br>
         <input name="excuse" type="radio" value="malade">Malade &nbsp
